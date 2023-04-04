@@ -5,12 +5,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   devtool: 'source-map',
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname,'./dist'),
-    filename: './js/main.js'
+    filename: './js/main.js',
+    publicPath: '/',
   },
   module:{
     rules: [
